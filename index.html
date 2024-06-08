@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Fast Auth</title>
+    <link rel="stylesheet" href="pico.violet.min.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Быстрая авторизация Twitch</h1>
+        <hr>
+        <p>Если авторизация происходит на стриме - экран лучше скрыть.</p>
+        <article>
+            <header>Scopes</header>
+            <fieldset>
+                <label>
+                    <input type="checkbox" id="analytics:read:extensions" class="scope">
+                    analytics:read:extensions
+                </label>
+                <label>
+                    <input type="checkbox" id="analytics:read:games" class="scope">
+                    analytics:read:games
+                </label>
+                <label>
+                    <input type="checkbox" id="bits:read" class="scope">
+                    bits:read
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:manage:ads" class="scope">
+                    channel:manage:ads
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:read:ads" class="scope">
+                    channel:read:ads
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:manage:broadcast" class="scope">
+                    channel:manage:broadcast
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:read:charity" class="scope">
+                    channel:read:charity
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:edit:commercial" class="scope">
+                    channel:edit:commercial
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:read:editors" class="scope">
+                    channel:read:editors
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:manage:extensions" class="scope">
+                    channel:manage:extensions
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:read:goals" class="scope" checked>
+                    channel:read:goals
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:read:guest_star" class="scope">
+                    channel:read:guest_star
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:manage:guest_star" class="scope">
+                    channel:manage:guest_star
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:read:hype_train" class="scope">
+                    channel:read:hype_train
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:manage:moderators" class="scope">
+                    channel:manage:moderators
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:read:polls" class="scope" checked>
+                    channel:read:polls
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:manage:polls" class="scope">
+                    channel:manage:polls
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:read:predictions" class="scope" checked>
+                    channel:read:predictions
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:manage:predictions" class="scope">
+                    channel:manage:predictions
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:manage:raids" class="scope">
+                    channel:manage:raids
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:read:redemptions" class="scope" checked>
+                    channel:read:redemptions
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:manage:redemptions" class="scope">
+                    channel:manage:redemptions
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:manage:schedule" class="scope">
+                    channel:manage:schedule
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:read:stream_key" class="scope">
+                    channel:read:stream_key
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:read:subscriptions" class="scope" checked>
+                    channel:read:subscriptions
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:manage:videos" class="scope">
+                    channel:manage:videos
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:read:vips" class="scope">
+                    channel:read:vips
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:manage:vips" class="scope">
+                    channel:manage:vips
+                </label>
+                <label>
+                    <input type="checkbox" id="clips:edit" class="scope">
+                    clips:edit
+                </label>
+                <label>
+                    <input type="checkbox" id="moderation:read" class="scope">
+                    moderation:read
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:manage:announcements" class="scope">
+                    moderator:manage:announcements
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:manage:automod" class="scope">
+                    moderator:manage:automod
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:read:automod_settings" class="scope">
+                    moderator:read:automod_settings
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:manage:automod_settings" class="scope">
+                    moderator:manage:automod_settings
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:manage:banned_users" class="scope">
+                    moderator:manage:banned_users
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:read:blocked_terms" class="scope">
+                    moderator:read:blocked_terms
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:manage:blocked_terms" class="scope">
+                    moderator:manage:blocked_terms
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:manage:chat_messages" class="scope">
+                    moderator:manage:chat_messages
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:read:chat_settings" class="scope">
+                    moderator:read:chat_settings
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:manage:chat_settings" class="scope">
+                    moderator:manage:chat_settings
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:read:chatters" class="scope">
+                    moderator:read:chatters
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:read:followers" class="scope">
+                    moderator:read:followers
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:read:guest_star" class="scope">
+                    moderator:read:guest_star
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:manage:guest_star" class="scope">
+                    moderator:manage:guest_star
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:read:shield_mode" class="scope">
+                    moderator:read:shield_mode
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:manage:shield_mode" class="scope">
+                    moderator:manage:shield_mode
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:read:shoutouts" class="scope">
+                    moderator:read:shoutouts
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:manage:shoutouts" class="scope">
+                    moderator:manage:shoutouts
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:read:unban_requests" class="scope">
+                    moderator:read:unban_requests
+                </label>
+                <label>
+                    <input type="checkbox" id="moderator:manage:unban_requests" class="scope">
+                    moderator:manage:unban_requests
+                </label>
+                <label>
+                    <input type="checkbox" id="user:edit" class="scope">
+                    user:edit
+                </label>
+                <label>
+                    <input type="checkbox" id="user:edit:follows" class="scope">
+                    user:edit:follows
+                </label>
+                <label>
+                    <input type="checkbox" id="user:read:blocked_users" class="scope">
+                    user:read:blocked_users
+                </label>
+                <label>
+                    <input type="checkbox" id="user:manage:blocked_users" class="scope">
+                    user:manage:blocked_users
+                </label>
+                <label>
+                    <input type="checkbox" id="user:read:broadcast" class="scope">
+                    user:read:broadcast
+                </label>
+                <label>
+                    <input type="checkbox" id="user:manage:chat_color" class="scope">
+                    user:manage:chat_color
+                </label>
+                <label>
+                    <input type="checkbox" id="user:read:email" class="scope">
+                    user:read:email
+                </label>
+                <label>
+                    <input type="checkbox" id="user:read:emotes" class="scope">
+                    user:read:emotes
+                </label>
+                <label>
+                    <input type="checkbox" id="user:read:follows" class="scope">
+                    user:read:follows
+                </label>
+                <label>
+                    <input type="checkbox" id="user:read:moderated_channels" class="scope">
+                    user:read:moderated_channels
+                </label>
+                <label>
+                    <input type="checkbox" id="user:read:subscriptions" class="scope">
+                    user:read:subscriptions
+                </label>
+                <label>
+                    <input type="checkbox" id="user:manage:whispers" class="scope">
+                    user:manage:whispers
+                </label>
+                <hr>
+                <label>
+                    <input type="checkbox" id="channel:bot" class="scope">
+                    channel:bot
+                </label>
+                <label>
+                    <input type="checkbox" id="channel:moderate" class="scope">
+                    channel:moderate
+                </label>
+                <label>
+                    <input type="checkbox" id="chat:edit" class="scope">
+                    chat:edit
+                </label>
+                <label>
+                    <input type="checkbox" id="chat:read" class="scope" checked>
+                    chat:read
+                </label>
+                <label>
+                    <input type="checkbox" id="user:bot" class="scope">
+                    user:bot
+                </label>
+                <label>
+                    <input type="checkbox" id="user:read:chat" class="scope" checked>
+                    user:read:chat
+                </label>
+                <label>
+                    <input type="checkbox" id="user:write:chat" class="scope">
+                    user:write:chat
+                </label>
+                <label>
+                    <input type="checkbox" id="whispers:read" class="scope">
+                    whispers:read
+                </label>
+                <label>
+                    <input type="checkbox" id="whispers:edit" class="scope">
+                    whispers:edit
+                </label>
+            </fieldset>
+            <footer><button onclick="auth()">Авторизация</button></footer>
+        </article>
+            
+        <article>
+            <header>access_token</header>
+            <input id="access-token" type="password" readonly>
+            <footer><button onclick="copy()" id="copy" disabled>Скопировать</button></footer>
+        </article>
+        
+        <hr>
+        <small>
+            <a href="https://dev.twitch.tv/docs/" target="_blank">Документация Twitch API</a>,
+            <a href="https://github.com/declider/twitch-auth" target="_blank">GitHub</a>, автор: declider
+        </small>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
