@@ -1,2 +1,2 @@
-Простая страница чтобы быстро получать access token для DonationAlerts.
+Простая страница чтобы быстро получать access token для Twitch.
 Использовано: [PicoCSS](https://picocss.com/)
