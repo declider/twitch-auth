@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twitch Fast Auth</title>
-    <link rel="stylesheet" href="pico.violet.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Twitch Fast Auth</title>
+	<link rel="stylesheet" href="pico.violet.min.css">
 </head>
 <body>
-    <main class="container">
-        <h1>Быстрая авторизация Twitch</h1>
-        <hr>
-        <p>Если авторизация происходит на стриме - <strong>ОБЯЗАТЕЛЬНО</strong> скройте экран.</p>
-        <article>
-            <header>Scopes</header>
-            <fieldset>
-                <label>
+	<main class="container">
+		<h1>Быстрая авторизация Twitch</h1>
+		<hr>
+		<p>Если авторизация происходит на стриме - <strong>ОБЯЗАТЕЛЬНО</strong> скройте экран.</p>
+		<article>
+			<header>Scopes</header>
+			<fieldset>
+				<label>
 					<input type="checkbox" id="analytics:read:extensions" class="scope">
 					analytics:read:extensions
 				</label>
@@ -59,7 +59,7 @@
 					channel:manage:extensions
 				</label>
 				<label>
-					<input type="checkbox" id="channel:read:goals" class="scope">
+					<input type="checkbox" id="channel:read:goals" class="scope" checked>
 					channel:read:goals
 				</label>
 				<label>
@@ -79,7 +79,7 @@
 					channel:manage:moderators
 				</label>
 				<label>
-					<input type="checkbox" id="channel:read:polls" class="scope">
+					<input type="checkbox" id="channel:read:polls" class="scope" checked>
 					channel:read:polls
 				</label>
 				<label>
@@ -87,7 +87,7 @@
 					channel:manage:polls
 				</label>
 				<label>
-					<input type="checkbox" id="channel:read:predictions" class="scope">
+					<input type="checkbox" id="channel:read:predictions" class="scope" checked>
 					channel:read:predictions
 				</label>
 				<label>
@@ -99,7 +99,7 @@
 					channel:manage:raids
 				</label>
 				<label>
-					<input type="checkbox" id="channel:read:redemptions" class="scope">
+					<input type="checkbox" id="channel:read:redemptions" class="scope" checked>
 					channel:read:redemptions
 				</label>
 				<label>
@@ -115,7 +115,7 @@
 					channel:read:stream_key
 				</label>
 				<label>
-					<input type="checkbox" id="channel:read:subscriptions" class="scope">
+					<input type="checkbox" id="channel:read:subscriptions" class="scope" checked>
 					channel:read:subscriptions
 				</label>
 				<label>
@@ -271,7 +271,7 @@
 					user:read:broadcast
 				</label>
 				<label>
-					<input type="checkbox" id="user:read:chat" class="scope">
+					<input type="checkbox" id="user:read:chat" class="scope" checked>
 					user:read:chat
 				</label>
 				<label>
@@ -315,30 +315,30 @@
 					chat:edit
 				</label>
 				<label>
-					<input type="checkbox" id="chat:read" class="scope">
+					<input type="checkbox" id="chat:read" class="scope" checked>
 					chat:read
 				</label>
 				<label>
 					<input type="checkbox" id="whispers:read" class="scope">
 					whispers:read
 				</label>
-            </fieldset>
-            <footer><button onclick="auth()">Авторизация</button></footer>
-        </article>
-            
-        <article>
-            <header>access_token</header>
-            <input id="access-token" type="password" readonly>
-            <footer><button onclick="copy()" id="copy" disabled>Скопировать</button></footer>
-        </article>
-        
-        <hr>
-        <small>
-            <a href="https://dev.twitch.tv/docs/" target="_blank">Документация Twitch API</a><br>
-            <a href="https://github.com/declider/twitch-auth" target="_blank">GitHub</a><br>
-            client_id -  aiyysqyzzy8is6gwt4125y1603uwi8
-        </small>
-    </main>
-    <script src="script.js"></script>
+			</fieldset>
+			<footer><button onclick="auth()">Авторизация</button></footer>
+		</article>
+			
+		<article>
+			<header>access_token</header>
+			<input id="access-token" type="password" readonly>
+			<footer><button onclick="copy()" id="copy" disabled>Скопировать</button></footer>
+		</article>
+		
+		<hr>
+		<small>
+			<a href="https://dev.twitch.tv/docs/" target="_blank">Документация Twitch API</a><br>
+			<a href="https://github.com/declider/twitch-auth" target="_blank">GitHub</a><br>
+			client_id -  aiyysqyzzy8is6gwt4125y1603uwi8
+		</small>
+	</main>
+	<script src="script.js"></script>
 </body>
 </html>
