@@ -14,7 +14,7 @@
 		<article>
 			<header>Scopes</header>
 			<fieldset>
-				<label>
+								<label>
 					<input type="checkbox" id="analytics:read:extensions" class="scope" title="View analytics data for the Twitch Extensions owned by the authenticated account.">
 					analytics:read:extensions
 				</label>
@@ -45,6 +45,10 @@
 				<label>
 					<input type="checkbox" id="channel:read:charity" class="scope" title="Read charity campaign details and user donations on your channel.">
 					channel:read:charity
+				</label>
+				<label>
+					<input type="checkbox" id="channel:manage:clips" class="scope" title="Manage Clips for a channel.">
+					channel:manage:clips
 				</label>
 				<label>
 					<input type="checkbox" id="channel:edit:commercial" class="scope" title="Run commercials on a channel.">
@@ -139,6 +143,10 @@
 					clips:edit
 				</label>
 				<label>
+					<input type="checkbox" id="editor:manage:clips" class="scope" title="Manage Clips as an editor.">
+					editor:manage:clips
+				</label>
+				<label>
 					<input type="checkbox" id="moderation:read" class="scope" title="View a channelâs moderation data including Moderators, Bans, Timeouts, and Automod settings.">
 					moderation:read
 				</label>
@@ -227,8 +235,12 @@
 					moderator:manage:shoutouts
 				</label>
 				<label>
-					<input type="checkbox" id="moderator:read:suspicious_users" class="scope" title="Read chat messages from suspicious users and see users flagged as suspicious in channels where you have the moderator role.">
+					<input type="checkbox" id="moderator:read:suspicious_users" class="scope" title="Read chat messages from suspicious users and see users flagged as suspicious in channels where the user has the moderator role.">
 					moderator:read:suspicious_users
+				</label>
+				<label>
+					<input type="checkbox" id="moderator:manage:suspicious_users" class="scope" title="Manage suspicious user statuses in channels where the user has the moderator role.">
+					moderator:manage:suspicious_users
 				</label>
 				<label>
 					<input type="checkbox" id="moderator:read:unban_requests" class="scope" title="View a broadcasterâs unban requests.">
@@ -346,4 +358,5 @@
 	<script src="script.js"></script>
 </body>
 </html>
+
 
